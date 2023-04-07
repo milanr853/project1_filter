@@ -9,7 +9,7 @@ function SearchFilter() {
 
 
     return (
-        <div className='h-[20%] flex justify-center items-center rounded-md '>
+        <div className='h-[20%] w-[75%] min-w-[420px] flex justify-center items-center rounded-md '>
             <div className='w-10/12 rounded-lg bg-white p-1'>
                 <input value={state} className='h-12 w-full p-4 rounded-lg outline-none bg-slate-200' placeholder='Search' type="text" onChange={handleChange} />
             </div>
