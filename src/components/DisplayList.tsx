@@ -28,7 +28,7 @@ function DisplayList({ data = [] }: PropTypes) {
                                 className={`
                             ${index % 3 === 0 ? "bg-[#fef970]" : ""} ${index % 3 === 1 ? "bg-[#9decff]" : ""
                                     } ${index % 3 === 2 ? "bg-white" : ""}
-                        w-full h-[100px] rounded-md  flex p-3` }>
+                        w-full h-[100px] rounded-md  flex p-3 select-none` }>
 
                                 <div className='flex flex-col w-[50%] justify-between'>
                                     <h2 className='font-semibold text-xl'>{name.length <= 8 ? capitalize(name) :
