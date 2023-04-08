@@ -1,7 +1,15 @@
 import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
 
 function DisplayList() {
-    const [arr, setArr] = useState([1, 2, 3, 4, 5, 6])
+    const [arr, setArr] = useState([])
+
+    const Data = useSelector((store: { ListReducer: { data: [] } }) => store?.ListReducer.data)
+
+    React.useEffect(() => {
+        // setArr(prev=>[Data])
+    }, [Data])
+
 
     return (
         <div id='scroll' className='h-[80%] w-[75%] min-w-[420px] rounded-md overflow-y-scroll scroll flex flex-col items-center items-cente '>

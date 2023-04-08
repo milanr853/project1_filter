@@ -2,6 +2,8 @@ import { nanoid } from '@reduxjs/toolkit'
 import React, { ChangeEvent, useState } from 'react'
 import { capitalize } from '../utilities/functions'
 import Portal from './Portal'
+import { addNewItem } from '../redux/ListSlice'
+import { useDispatch } from 'react-redux/es/exports'
 
 
 function Form() {
@@ -9,6 +11,8 @@ function Form() {
     const [rating, setRating] = useState<string | number>('')
     const [duration, setDuration] = useState('')
     const [error, setError] = useState<string>('')
+
+    const dispatch = useDispatch()
 
     function clearStates() {
         setName('')
@@ -33,8 +37,8 @@ function Form() {
                     hDur = checks[0]
                 }
                 const movieData = { name, rating, duration: hDur, id: nanoid() }
-                console.log(movieData)
                 //submit 
+                dispatch(addNewItem(movieData))
                 clearStates()
             }
             else setError('Duration format: 2h or 132')
