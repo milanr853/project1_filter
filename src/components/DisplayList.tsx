@@ -7,8 +7,8 @@ function DisplayList() {
         <div id='scroll' className='h-[80%] w-[75%] min-w-[420px] rounded-md overflow-y-scroll scroll flex flex-col items-center items-cente '>
             {
                 arr.map((e: any, index) => (
-                    <div className='bg-white rounded-md p-1 flex w-9/12 mb-6 ${e == 1 && "mt-6"}'>
-                        <div key={e}
+                    <div className='bg-white rounded-md p-1 flex w-9/12 mb-6 ${e == 1 && "mt-6"}' key={e}>
+                        <div
                             className={`
                             ${index % 3 === 0 ? "bg-[#fef970]" : ""} ${index % 3 === 1 ? "bg-[#9decff]" : ""
                                 } ${index % 3 === 2 ? "bg-white" : ""}

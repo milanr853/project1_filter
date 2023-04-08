@@ -2,7 +2,6 @@ import React from 'react'
 import Form from './Form'
 import SearchFilter from './SearchFilter'
 import DisplayList from './DisplayList'
-import Portal from './Portal'
 
 
 function View() {
@@ -19,8 +18,6 @@ function View() {
                 <DisplayList />
             </div>
 
-
-            <Portal />
         </div>
 
     )
