@@ -32,7 +32,6 @@ const movieData = { movie_name, rating, duration, id: nanoid() }
 
 ### 📦️ Packages used:
     Tailwindcss
-    Reselect
     Redux tool kit
 
 ### :triangular_flag_on_post: Features
