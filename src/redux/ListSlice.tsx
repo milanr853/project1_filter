@@ -16,7 +16,7 @@ const listSlice = createSlice({
             state.data.push(payload)
         },
         removeItem: (state, { payload }) => {
-            state.data.filter(({ id }) => id !== payload)
+            state.data = state.data.filter(({ id }) => id !== payload)
         }
     },
 });

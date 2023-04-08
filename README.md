@@ -36,8 +36,7 @@ const movieData = { movie_name, rating, duration, id: nanoid() }
     Redux tool kit
 
 ### :triangular_flag_on_post: Features
-1. List of movie objects are sorted in ascending order w.r.t their durations.
-2. Movies can be deleted.
+1. Movies are be deleted on double click.
 
 
 ### 📝 Notes

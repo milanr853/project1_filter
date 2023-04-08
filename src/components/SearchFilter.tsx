@@ -1,5 +1,4 @@
 import React, { ChangeEvent, useState } from 'react'
-import { useSelector } from 'react-redux'
 
 type PropTypes = {
     filterList: (query: string) => void
