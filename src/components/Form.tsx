@@ -7,8 +7,9 @@ import { useDispatch } from 'react-redux/es/exports'
 
 
 function Form() {
+    //local states
     const [name, setName] = useState('')
-    const [rating, setRating] = useState<string | number>('')
+    const [rating, setRating] = useState<string>('')
     const [duration, setDuration] = useState('')
     const [error, setError] = useState<string>('')
 
@@ -22,8 +23,8 @@ function Form() {
 
     const handleClick = () => {
         if (!name) setError('name cannot be empty')
-        else if (!rating) setError('rating cannot be empty')
-        else if (rating == 0) setError('rating cannot be 0')
+        else if (!rating.length) setError('rating cannot be empty or non numeric')
+        else if (rating === '0') setError('rating cannot be 0')
         else if (!duration) setError('duration cannot be empty')
 
         else {
@@ -78,4 +79,4 @@ function Form() {
     )
 }
 
-export default Form
+export default React.memo(Form)

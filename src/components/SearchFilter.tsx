@@ -1,11 +1,22 @@
 import React, { ChangeEvent, useState } from 'react'
+import { useSelector } from 'react-redux'
 
-function SearchFilter() {
+type PropTypes = {
+    filterList: (query: string) => void
+}
+
+function SearchFilter({ filterList }: PropTypes) {
     const [state, setState] = useState<string>('')
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setState(e.target.value)
     }
+
+    React.useEffect(() => {
+        filterList(state)
+    }, [state])
+
+
 
 
     return (
@@ -17,4 +28,4 @@ function SearchFilter() {
     )
 }
 
-export default SearchFilter
+export default React.memo(SearchFilter)
