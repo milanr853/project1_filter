@@ -42,7 +42,7 @@ function Form() {
                 dispatch(addNewItem(movieData))
                 clearStates()
             }
-            else setError('Duration format: 2h or 132')
+            else setError('Duration format: 2h or 132m')
         }
     }
 
