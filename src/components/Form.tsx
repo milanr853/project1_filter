@@ -1,7 +1,6 @@
 import { nanoid } from '@reduxjs/toolkit'
 import React, { ChangeEvent, useState } from 'react'
 import { capitalize } from '../utilities/functions'
-import Portal from './Portal'
 import { addNewItem } from '../redux/ListSlice'
 import { useDispatch } from 'react-redux/es/exports'
 
@@ -57,7 +56,7 @@ function Form() {
 
 
     return (
-        <div className='bg-sky-300 w-[75%] rounded-md flex flex-col items-center justify-center gap-8 min-h-[500px] min-w-[370px]'>
+        <div className='bg-sky-300 w-[75%] rounded-md flex flex-col items-center justify-center gap-8 min-h-[500px] relative min-w-[370px]'>
             <div className='w-full flex justify-center items-center'>
                 <input value={capitalize(name)} className='h-14 rounded-md p-4 w-[80%]' type="text" placeholder='Movie name' onChange={nameChange} />
             </div>
@@ -74,7 +73,8 @@ function Form() {
                 Submit
             </div>
 
-            <Portal error={error} />
+            <div className={`absolute ${error ? 'flex' : 'hidden'} justify-center items-center bg-[#FF6B6B] w-[80%] h-10 bottom-10 text-white rounded-md`}>{error}</div>
+
         </div>
     )
 }
