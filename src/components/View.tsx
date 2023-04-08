@@ -2,11 +2,12 @@ import React from 'react'
 import Form from './Form'
 import SearchFilter from './SearchFilter'
 import DisplayList from './DisplayList'
+import Portal from './Portal'
 
 
 function View() {
     return (
-        <div id='container' className='w-full min-h-[100vh] 
+        <div id='container' className='relative w-full min-h-[100vh]
         flex bg-[#111c2f] justify-center items-center px-8' >
 
             <div className="w-1/2 h-[90vh] flex p-8 justify-center">
@@ -17,7 +18,11 @@ function View() {
                 <SearchFilter />
                 <DisplayList />
             </div>
+
+
+            <Portal />
         </div>
+
     )
 }
 
